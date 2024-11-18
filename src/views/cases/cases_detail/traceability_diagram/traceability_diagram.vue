@@ -344,10 +344,10 @@ export default {
             }
             let num =0;
             if(this.value == 'forward'){
-                num = 2;
+                num = 3;
             }
             if(this.value == 'back'){
-                num = 3;
+                num = 2;
             }
             var query = 'USE ' + this.log_data.host + num + ' MATCH p=()-->() RETURN p';
             this.executeCypher(query);
