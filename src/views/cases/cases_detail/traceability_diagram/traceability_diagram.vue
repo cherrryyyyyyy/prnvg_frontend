@@ -330,6 +330,9 @@ export default {
                     this_node = log;
                 }
             }
+            if (this.value == 'all'){
+                return;
+            }
             if (this.value != 'all') {
                 let res = await SubGraphConstruct({
                     index: this.caseData.host,
@@ -339,6 +342,15 @@ export default {
                     time: this_node.timestamp
                 });
             }
+            let num =0;
+            if(this.value == 'forward'){
+                num = 2;
+            }
+            if(this.value == 'back'){
+                num = 3;
+            }
+            var query = 'USE ' + this.log_data.host + num + ' MATCH p=()-->() RETURN p';
+            this.executeCypher(query);
 
 
         }
