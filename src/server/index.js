@@ -50,6 +50,15 @@ app.get('/getNodeLog', (req, res) => {
 	
 })
 
+app.get('/getRules', (req, res) => {
+	let sql = 'select * from rules'
+	//console.log(req.query.param.id);
+	conMysql(sql).then(result => {
+		res.send(result)
+	})
+	
+})
+
 app.get('/getAlert', (req, res) => {
 	let sql = 'select * from escalate_log'
 	//console.log(req.query.param.id);
