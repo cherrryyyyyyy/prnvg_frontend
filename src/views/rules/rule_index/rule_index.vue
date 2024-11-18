@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header">
-            <h3>
+            <h3 style="color: black;">
                 规则（{{ total }}个）
             </h3>
         </div>
