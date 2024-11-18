@@ -76,7 +76,7 @@ export default {
         showdetail(val){
             this.$router.push(
                 {
-                    path: '/rule/ruledetail',
+                    path: '/rules/ruledetail',
                     query: { index: val }
                 })
         }
