@@ -5,7 +5,7 @@ module.exports = defineConfig({
   devServer: {
     proxy: {
       '/gra':{
-        target: 'http://192.168.137.224:9876',
+        target: 'http://192.168.1.2:9876',
         changeOrigin: true, //是否跨域
         pathRewrite: { '^/gra': '' }
       },
