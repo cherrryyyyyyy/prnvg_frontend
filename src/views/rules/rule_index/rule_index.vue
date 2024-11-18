@@ -28,7 +28,7 @@
                                 <template slot-scope="scope">
                                     <!--编辑功能待实现-->
                                     <el-button type="primary" size="mini" icon="el-icon-edit"
-                                        @click="CaseDetail(scope.$index, scope.row)">事件详情</el-button>
+                                        @click="RuleDetail(scope.$index, scope.row)">事件详情</el-button>
                                 </template>
                             </el-table-column>
                         </el-table>

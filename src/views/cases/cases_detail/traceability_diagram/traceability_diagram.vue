@@ -27,6 +27,7 @@
             </template>
             <el-button type="primary" @click="onSubmit">创建图表</el-button>
             <div class="wrapper1" v-loading="this.knowlegGraphshow" style="border: 1px solid black;">
+                <!--
                 <el-row>
                     <el-col :span="20">
                         <div class="grid-content bg-purple">
@@ -47,6 +48,7 @@
                         </div>
                     </el-col>        
                 </el-row>
+                -->
             </div>
         </div>
     </div>
