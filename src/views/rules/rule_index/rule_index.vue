@@ -82,7 +82,7 @@ export default {
         }
     },
     created() {
-        this.get_case();
+        this.get_rules();
     }
 }
 </script>
