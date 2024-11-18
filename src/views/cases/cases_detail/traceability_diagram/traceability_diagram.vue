@@ -107,7 +107,6 @@ export default {
             // 创建实例
             this.driver = neo4j.driver('bolt://192.168.1.3:7690', neo4j.auth.basic('neo4j', '12345678'));
             console.log("🚀 ~ file: AuthorArticleSearch.vue ~ line 46 ~ mounted ~  this.drive", this.driver)
-
             let me = this;
             me.records = [];
             this.clearAll = true;
@@ -295,12 +294,6 @@ export default {
                 },
             };
             this.network = new Vis.Network(container, data, options);
-            this.network.on('selectNode', (params) => {
-                // 显示悬停内容
-                console.log('select', params.nodes[0])
-                let id = params.nodes[0];
-                this.generate_node_info(id);
-            });
             this.knowlegGraphshow = false
             console.log(this.knowlegGraphshow)
         },
