@@ -1,24 +1,24 @@
 <template>
     <div>
-      <!--
+        <!--
               使用router-view使界面跳转到路由下
           -->
-      <router-view></router-view>
+        <router-view></router-view>
     </div>
-  </template>
-  
-  <script>
-  export default {
+</template>
+
+<script>
+export default {
     data() {
-      return {
-        
-      }
+        return {
+
+        }
     },
     methods: {
 
     }
-  
-  }
-  </script>
-  
-  <style></style>
+
+}
+</script>
+
+<style></style>

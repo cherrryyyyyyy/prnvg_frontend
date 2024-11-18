@@ -44,7 +44,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import { getRules } from '@/axios/api'
 import Pagination from '@/component/pagination/page-tabs.vue'
 export default {
