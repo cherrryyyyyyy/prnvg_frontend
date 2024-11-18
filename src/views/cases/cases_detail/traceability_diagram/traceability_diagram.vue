@@ -27,28 +27,6 @@
             </template>
             <el-button type="primary" @click="onSubmit">创建图表</el-button>
             <div class="wrapper1" v-loading="this.knowlegGraphshow" style="border: 1px solid black;">
-                <!--
-                <el-row>
-                    <el-col :span="20">
-                        <div class="grid-content bg-purple">
-                            <div id="network_id" ref="network_id" class="network" style="height: 700px;width: 1400px;">
-                            </div>
-                        </div>
-                    </el-col>
-                    <el-col :span="4">
-                        <div class="grid-content bg-purple">
-                            <el-descriptions :column="1" border style="height: 300px;width: 300px">
-                                <template v-for="(item, index) in clientInfo.contactInfo">
-                                    <el-descriptions-item label="联系人"
-                                        :key="index">{{ item.contactPerson }}</el-descriptions-item>
-                                    <el-descriptions-item label="联系电话"
-                                        :key="index">{{ item.contactPhone }}</el-descriptions-item>
-                                </template>
-                            </el-descriptions>
-                        </div>
-                    </el-col>        
-                </el-row>
-                -->
             </div>
         </div>
     </div>
@@ -127,7 +105,7 @@ export default {
             this.echartsNode = []  //节点数组
             this.nodesRelation = [] //关系线数组
             // 创建实例
-            this.driver = neo4j.driver('bolt://10.114.23.20:7687', neo4j.auth.basic('neo4j', '12345678'));
+            this.driver = neo4j.driver('bolt://192.168.1.3:7690', neo4j.auth.basic('neo4j', '12345678'));
             console.log("🚀 ~ file: AuthorArticleSearch.vue ~ line 46 ~ mounted ~  this.drive", this.driver)
 
             let me = this;
