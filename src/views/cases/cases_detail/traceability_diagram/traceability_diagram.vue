@@ -27,6 +27,8 @@
             </template>
             <el-button type="primary" @click="onSubmit">创建图表</el-button>
             <div class="wrapper1" v-loading="this.knowlegGraphshow" style="border: 1px solid black;">
+                <div id="network_id" ref="network_id" class="network" style="height: 700px;width: 1400px;">
+                </div>
             </div>
         </div>
     </div>
@@ -297,18 +299,6 @@ export default {
             this.knowlegGraphshow = false
             console.log(this.knowlegGraphshow)
         },
-        check() {
-
-            var div = document.getElementById("network_id");
-            if (div) {
-                //元素存在的操作代码
-                console.log("div元素存在");
-            } else {
-                //元素不存在的操作代码
-                console.log("div元素不存在");
-            }
-
-        },
         async Graph_construct() {
             //const url = 'http://192.168.137.224:9876/graphconstruct';
             const data = {
@@ -328,9 +318,6 @@ export default {
             //var query = 'USE auditd1d2aa7781797521fe75b4d56c98220911 MATCH p=()-->() RETURN p';
             var query = 'USE ' + this.log_data.host + '1' + ' MATCH p=()-->() RETURN p';
             this.executeCypher(query);
-        },
-        generate_node_info(id) {
-
         },
         onSubmit() {
             this.getnodelog();
@@ -359,15 +346,12 @@ export default {
     },
     mounted() {
         this.getRootCase();
-        this.timer = setInterval(this.check, 3000);
+        //this.timer = setInterval(this.check, 3000);
         var query = 'USE sysmonwin71 MATCH p=()-->() RETURN p'
 
         //this.executeCypher(query);
         console.log(this.knowlegGraphshow);
         console.log(this.caseData.host);
-    },
-    beforeDestroy() {
-        clearInterval(this.timer);
     }
 }
 </script>
